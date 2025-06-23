@@ -20,7 +20,7 @@
       --accent-hover: #005bb5;
       --font: 'Poppins', sans-serif;
       --fade-duration: 0.8s;
-      --shimmer-duration: 3s;
+      --shimmer-duration: 4s;
     }
 
     *, *::before, *::after {
@@ -43,9 +43,12 @@
       from { opacity: 0; transform: translateY(20px); }
       to   { opacity: 1; transform: translateY(0); }
     }
+
+    /* Градієнт анімація заголовка L→R→L по циклу */
     @keyframes shimmer {
-      0%   { background-position: -200% center; }
-      100% { background-position: 200% center; }
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     .container {
@@ -60,22 +63,23 @@
       animation: fadeIn var(--fade-duration) ease-out;
     }
 
-    /* Шіммер для заголовка */
     h1 {
       font-size: 2rem;
       font-weight: 600;
       margin-bottom: 8px;
+      /* Градієнтний текст */
       background: linear-gradient(
         90deg,
-        var(--accent) 25%,
-        var(--accent-hover) 50%,
-        var(--accent) 75%
+        var(--accent),
+        var(--accent-hover),
+        var(--accent)
       );
+      background-size: 200% 100%;
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      background-size: 200% auto;
-      animation: shimmer var(--shimmer-duration) linear infinite;
+      /* Анімація градієнта */
+      animation: shimmer var(--shimmer-duration) ease-in-out infinite;
     }
 
     .tagline {
