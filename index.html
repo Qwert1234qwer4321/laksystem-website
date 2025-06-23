@@ -78,9 +78,37 @@
       border-radius: 24px;
       text-decoration: none;
       transition: background .2s;
+      font-weight: 500;
     }
     .website-link a:hover {
       background: var(--accent-hover);
+    }
+    .location {
+      margin-top: 32px;
+      text-align: center;
+    }
+    .location h2 {
+      margin-bottom: 8px;
+      color: var(--primary);
+      font-size: 1.25rem;
+    }
+    .location p {
+      margin: 4px 0;
+      color: var(--secondary);
+      font-size: 0.9rem;
+    }
+    .location a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color .2s;
+    }
+    .location a:hover {
+      color: var(--accent-hover);
+    }
+    .location i {
+      margin-right: 6px;
+      color: var(--accent);
     }
   </style>
 </head>
@@ -93,19 +121,27 @@
       <a href="https://www.facebook.com/yourcompany" target="_blank" aria-label="Facebook">
         <i class="fab fa-facebook-f"></i>
       </a>
-      <a href="https://twitter.com/yourcompany" target="_blank" aria-label="Twitter">
-        <i class="fab fa-twitter"></i>
-      </a>
       <a href="https://www.instagram.com/yourcompany" target="_blank" aria-label="Instagram">
         <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://www.linkedin.com/company/yourcompany" target="_blank" aria-label="LinkedIn">
-        <i class="fab fa-linkedin-in"></i>
       </a>
     </div>
 
     <div class="website-link">
-      <a href="https://laksystem.com.pl/" target="_blank">Відвідати наш сайт</a>
+      <a href="https://laksystem.com.pl/" target="_blank">Dowiedz się więcej</a>
+    </div>
+
+    <div class="location">
+      <h2>Наше бюро</h2>
+      <p>
+        <i class="fas fa-map-marker-alt"></i>
+        Aleja Najświętszej Maryi Panny 34, 42-200 Częstochowa
+      </p>
+      <p>
+        <a href="https://www.google.com/maps?q=Aleja+Naj%C5%9Bwi%C4%99tszej+Maryi+Panny+34,+42-200+Cz%C4%99stochowa"
+           target="_blank">
+          Відкрити в Google Maps
+        </a>
+      </p>
     </div>
   </div>
 </body>
