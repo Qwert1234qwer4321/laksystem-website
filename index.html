@@ -12,12 +12,14 @@
 
   <style>
     :root {
-      --bg-gradient: linear-gradient(135deg, #6a11cb, #2575fc);
-      --card-bg: rgba(255, 255, 255, 0.9);
-      --primary: #333;
-      --secondary: #555;
-      --accent: #0073e6;
-      --accent-hover: #005bb5;
+      /* Трьохкольоровий яскравий градієнт фону */
+      --bg-gradient: linear-gradient(135deg, #ff5f6d, #ffc371, #6a11cb);
+      --card-bg: rgba(255, 255, 255, 0.95);
+      --primary: #222;
+      --secondary: #444;
+      /* Яркі акценти */
+      --accent: #ff5f6d;
+      --accent-hover: #ffc371;
       --font: 'Poppins', sans-serif;
       --fade-duration: 0.8s;
       --shimmer-duration: 4s;
@@ -43,8 +45,6 @@
       from { opacity: 0; transform: translateY(20px); }
       to   { opacity: 1; transform: translateY(0); }
     }
-
-    /* Градієнт анімація заголовка L→R→L по циклу */
     @keyframes shimmer {
       0%   { background-position: 0% 50%; }
       50%  { background-position: 100% 50%; }
@@ -56,29 +56,29 @@
       background: var(--card-bg);
       padding: 40px 20px;
       border-radius: 16px;
-      box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.1);
       text-align: center;
       width: 90%;
       max-width: 360px;
       animation: fadeIn var(--fade-duration) ease-out;
     }
 
+    /* Пульсуючий градієнт заголовка */
     h1 {
       font-size: 2rem;
       font-weight: 600;
       margin-bottom: 8px;
-      /* Градієнтний текст */
       background: linear-gradient(
         90deg,
-        var(--accent),
-        var(--accent-hover),
-        var(--accent)
+        #ff5f6d,
+        #ffc371,
+        #6a11cb,
+        #ff5f6d
       );
-      background-size: 200% 100%;
+      background-size: 300% 100%;
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      /* Анімація градієнта */
       animation: shimmer var(--shimmer-duration) ease-in-out infinite;
     }
 
