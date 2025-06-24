@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <title>LakSystem</title>
 
   <!-- Google Fonts -->
@@ -34,6 +34,7 @@
       align-items: center;
       justify-content: center;
       min-height: 100vh;
+      padding: 1rem;
     }
 
     @keyframes fadeIn { from { opacity: 0; transform: translateY(20px);} to { opacity: 1; transform: translateY(0);} }
@@ -48,7 +49,7 @@
       box-shadow: 0 12px 32px rgba(0,0,0,0.1);
       padding: 2rem 1rem;
       max-width: 360px;
-      width: 90%;
+      width: 100%;
       text-align: center;
       animation: fadeIn var(--fade) ease-out, bgPulse var(--pulse) ease-in-out infinite;
       position: relative;
@@ -64,6 +65,7 @@
       color: transparent;
       animation: shimmer var(--shimmer) ease-in-out infinite;
     }
+
     .tagline {
       font-size: 1rem;
       margin-bottom: 1.5rem;
@@ -137,6 +139,20 @@
       animation: fadeIn var(--fade) ease-out;
     }
     .rating i { color: var(--accent2); }
+
+    /* Responsive adjustments */
+    @media (max-width: 480px) {
+      .container {
+        padding: 1.5rem 0.75rem;
+      }
+      h1 { font-size: 1.5rem; }
+      .tagline { font-size: 0.9rem; }
+      .social-links a { width: 40px; height: 40px; }
+      .btn { padding: 0.6rem 1.2rem; font-size: 0.9rem; }
+      .location a { padding: 0.75rem; }
+      .location a i { font-size: 1.6rem; }
+      .rating { font-size: 0.9rem; }
+    }
 
     .container::after {
       content: '';
