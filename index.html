@@ -126,6 +126,18 @@
     }
     .location a i { font-size: 2rem; }
 
+    .rating {
+      margin-top: 0.5rem;
+      color: var(--accent1);
+      font-size: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.25rem;
+      animation: fadeIn var(--fade) ease-out;
+    }
+    .rating i { color: var(--accent2); }
+
     .container::after {
       content: '';
       position: absolute;
@@ -146,15 +158,23 @@
 
     <div class="social-links">
       <a href="https://www.facebook.com/yourcompany" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com/lak.system/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.tiktok.com/@lakesystem0?_t=ZN-8xRyD8PDjCI&_r=1" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.instagram.com/yourcompany" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@yourcompany" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
       <a href="mailto:kontakt.laksystem@gmail.com" target="_blank" aria-label="Email"><i class="fas fa-envelope"></i></a>
     </div>
 
     <a href="https://laksystem.com.pl/" class="btn" target="_blank">Dowiedz się więcej</a>
 
     <div class="location">
-      <a href="https://www.google.com/maps?q=Aleja+Naj%C5%9Bwi%C4%99tszej+Maryi+Panny+34,+42-200+Cz%C4%99stochowa" target="_blank" aria-label="Mapa"><i class="fas fa-map-marker-alt"></i></a>
+      <a href="https://maps.app.goo.gl/MshMHWkiTajAETxx9" target="_blank" aria-label="Mapa"><i class="fas fa-map-marker-alt"></i></a>
+      <div class="rating">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+        <span>4.2</span>
+      </div>
     </div>
   </div>
 </body>
